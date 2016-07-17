@@ -1,0 +1,40 @@
+ // ****** GLOBAL STYLES OF SCF ************* //
+
+    //@charset 'utf-8';
+
+//
+// **** importing bourbon to use all the awesome bourbon mixins ****
+// **** visit http://bourbon.io/ - to know more about bourbon *****
+// **** for docs, goto http://bourbon.io/docs/
+// Bourbon 4.2.7 - used here
+
+     @import "vendors/bourbon/bourbon";
+
+
+// ****************************************************************
+// Boostrap mixins imports - Just only import what you need
+// *****************************************************************
+
+@import "vendors/bootstrap/variables",
+        "vendors/bootstrap/mixins";    
+
+
+// **********************************************************************
+// SCF - Project related imports here
+// **********************************************************************
+
+@import "base/variables", 
+        "base/general";
+
+// *************************************************************************
+// Induvidual pages/section related imports
+// *************************************************************************
+
+@import "pages/assess/assess-variables",
+        "pages/assess/assess-template",
+        "pages/assess/assess-landing",
+        "pages/prioritize/provoke-landing";
+
+
+   
+         

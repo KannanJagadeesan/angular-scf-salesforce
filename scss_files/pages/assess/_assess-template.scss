@@ -1,0 +1,286 @@
+
+/* Common Template Levels Styles
+-------------------------------------------------- */
+body{
+     background-color: $bg-colour;
+     background-image: none;
+}
+
+/* Header Specific Styles
+-------------------------------------------------- */
+.userbox
+{
+    float: right;
+}
+.menusection
+{
+  float:left;
+}
+
+/*Top Navigation*/
+.assess
+{
+    &-img
+	{
+		background-color: #7b8da7;
+        float: left;
+        display: inline;
+        height: 50px;
+        width: 50px;
+        border-radius: 32px;
+        background-repeat: no-repeat;
+        background-position: center center;
+	}
+    &-img.active
+    {
+        background-color: #1dade6;
+    }
+
+    &-menuicon
+    {
+		
+		margin-top:15px;
+        padding:0px;
+  	}
+    &-menuicon span
+    {
+        background-color: $header-bg-color;
+        float: left;
+        display: inline;
+        height: 50px;
+        width: 52px;
+        border-top-right-radius: 24px;
+        border-bottom-right-radius: 24px;
+    }
+    &-menuicon img{
+	    position:relative;
+        top:8px;
+	}
+	&-menubg{
+
+        width: 19.5%;
+        float: left;
+        font-family: $scf-font-family-base;
+        font-size: 15px;
+        background-image: url($bg-image);
+		background-repeat: no-repeat;
+		background-size:100% 100%;
+        list-style-type: none;
+        background-position: 16px 0px;
+        margin-right:2px;
+        
+	}
+    &-text{
+        line-height: 48px;
+        float: left;
+        display: inline;
+        font-size: 14px;font-family: $font-name;
+        padding-left: 3px;
+    }
+    &-menubg.active
+	{
+		background-image: url($bg-image1);
+		background-repeat: no-repeat;
+		background-size:100% 100%;
+        background-position: 16px 0px;
+	}
+	&-menuicon a{
+		color:$text-color;	
+	}
+
+    //menu images settings
+    @for $i from 1 through length($menu-images) {
+        &-section-img#{$i} {
+            background-image: url(nth($menu-images, $i));
+        }
+    }
+    &-content
+    {
+        padding-top:140px;
+
+        &-wrapper
+        {
+            clear:both;
+        }
+    }
+    @media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:portrait)
+    {
+        &-content
+        {
+            padding-top:190px;
+        }
+        .main-title h1
+        {
+            font-size: 20px;
+        }
+    }
+}
+.active
+{
+    .assess-img
+    {
+            background-color: $menu-bg-selected;
+    }
+}
+.navbar{
+    &-welcome{
+        width:88%;
+    }
+}
+//Top Tab Navigation Related Styles
+.assess{
+    &-content section
+	{
+        background-color: $content-bg-color;
+        max-width: 1310px;
+        margin: 0 auto;
+        min-height:410px;
+	}
+	&-content .tabs
+	{
+        width: 100%;
+        overflow: hidden;
+    }
+    &-content-main
+    {
+        border-top: 3px solid #1dade6;
+
+        section {
+        padding: 0px;
+        display: block;
+	    
+    }
+    }
+    &-content nav
+    {
+        margin-bottom: -5px;
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: inline-block;
+            margin-left:10px;
+        }
+        li {
+            border-bottom: none;
+            margin: 0 0.25em;
+            display: block;
+            float: left;
+            position: relative;
+            background-color: #0e6fa6;
+            min-height: 50px;
+            border-top-left-radius: $radius;
+            border-top-right-radius: $radius;
+            text-align: $align;
+            width: 155px;
+            line-height: 18px;
+            padding-top: 3px;
+        }
+        li.active {
+            border-bottom: none;
+            z-index: 100;
+            background-color: #1dade6;
+        }
+        // li.active:before,
+        // li.active:after {
+        //     content: '';
+        //     position: absolute;
+        //     height: 3px;
+        //     right: 100%;
+        //     bottom: 0;
+        //     width: 1000px;
+        //     background: #47a3da;
+        // }
+        // li.active:after {
+        //     right: auto;
+        //     left: 100%;
+        //     width: 4000px;
+        // }
+        a {
+            color: $text-color;
+            display: block;
+            font-size: $fonts-size;
+            padding: 0 1.25em;
+            margin-top:5px;
+            text-align: $align;
+            cursor: pointer;
+        }
+        a:hover {
+            color: $text-color;
+        }
+        li.active a {
+            color: $text-color;
+        }
+        span
+        {
+        text-align: $align;	 
+        font-family: $font-name;
+        }
+        span.firsttext
+        {
+                line-height: 40px;
+        }
+        .okicon
+        {
+            background-image: url($bg-image2);
+            background-repeat: no-repeat;
+            background-position: top right 1px
+        }
+        .erroricon
+        {
+            
+            background-image: url($bg-image3);
+            background-repeat: no-repeat;
+            background-position: top right 1px
+        }
+        a:before {
+            display: inline-block;
+            vertical-align: middle;
+            text-transform: none;
+            font-weight: normal;
+            font-variant: normal;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            margin: -0.25em 0.4em 0 0;
+            //float: right;
+        }
+        // .okicon
+        // {
+        //     background-image: url($bg-image2);
+        //     background-repeat: no-repeat;
+        //     background-position: top right 1px
+        // }
+        // .erroricon
+        // {
+
+        //     background-image: url($bg-image3);
+        //     background-repeat: no-repeat;
+        //     background-position: top right 1px
+        // }
+    }
+    @media screen and (max-width: 52.375em) {
+        .tabs nav a span {
+            display: none;
+        }
+        .tabs nav a:before {
+            margin-right: 0;
+        }
+    }
+    @media screen and (max-width: 32em) {
+        .tabs nav ul,
+        .tabs nav ul li a {
+            width: 100%;
+            padding: 0;
+        }
+
+        .tabs nav ul li {
+            width: 20%;
+            width: calc(20% + 1px);
+            margin: 0 0 0 -1px;
+        }
+
+        .tabs nav ul li:last-child {
+            border-right: none;
+        }
+    }
+}

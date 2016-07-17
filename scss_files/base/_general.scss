@@ -1,0 +1,373 @@
+
+// ********************************************************************************//
+// ******  All general styles goes here ******************//
+// ********************************************************************************//
+
+
+
+/* Variables
+-------------------------------------------------- */
+/*Menu Section Variables*/
+$menu-bg :#25323A;
+$menu-bg-hover :#404040;
+$menu-text-color :#BEC4CA;
+$menu-border-color:#1EACE7;
+$footer-bg-color:#e0e0e0;
+$footer-text-color:#838383;
+
+/*Welcome Section Variables*/
+$headerlanding-bg-color: transparent;
+$header-bg-color:#005484;
+$header-icon-color: #fff;
+$header-icon-size: 30px;
+$header-welcomeicon-size: 22px;
+$header-welcomeicon-bg: #A0A0A0;
+$title-logo-width: 66px;
+$title-logo-height: 73px;
+$title-logo-color: #337399;
+
+$welcome-imagesize: 40px;
+$welcome-fontsize: 14px;
+
+
+$xs-welcome-imagesize: 30px;
+$xs-welcome-fontsize: 11px;
+$xs-header-welcomeicon-size: 17px;
+$xs-header-icon-size: 23px;
+$xstitle-logo-width: 55px;
+$xstitle-logo-height: 63px;
+
+
+$roboto-regular-font-path : $FONTFILEURL + $scf-roboto-regular + '/' + $scf-roboto-regular;
+
+@include font-face($scf-roboto-regular, $roboto-regular-font-path, $file-formats: eot woff ttf svg);
+
+
+
+body{
+	
+		//background-color: #FFFFFF;
+		font-family: $scf-font-family-base;
+    font-size: $font-size-base;
+    color:$scf-color-base;
+	}
+    
+a{
+	text-decoration: none;
+		
+	&:hover , &:active , &:focus{
+		outline: 0;	text-decoration:none;
+	}
+	
+	img{border: none;}
+	
+	 
+}
+.hide{display: none;}
+
+.clearfix{
+	
+	@include clearfix();
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.cursorpointer
+{
+  cursor:pointer;
+}
+/* Common Element Styles
+-------------------------------------------------- */
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label {
+  
+  color: #565656;
+    font-family:$scf-font-family-base;
+    font-weight: normal;
+}
+
+input[type="radio"] + label span {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  margin: -1px 4px 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  
+}
+
+input[type="radio"] + label span {
+  background-color: #fff;
+  border:2px solid #7eb561;
+  
+}
+
+input[type="radio"]:checked + label span {
+  background-color: #7eb561;
+}
+
+input[type="radio"] + label span,
+input[type="radio"]:checked + label span {
+  -webkit-transition: background-color 0.4s linear;
+  -o-transition: background-color 0.4s linear;
+  -moz-transition: background-color 0.4s linear;
+  transition: background-color 0.4s linear;
+}
+/* Menu styles
+-------------------------------------------------- */
+.navbar
+{
+    min-height: 56px;
+    margin-bottom: 0px;
+    &-inverse
+    {
+        padding-top:5px;
+        border-color:$headerlanding-bg-color;
+        background-color:$headerlanding-bg-color;
+    }
+    &-menuicon
+    {
+        float: right;
+    }
+    &-welcome
+    {
+        float: right;
+        padding-right:0.5%;
+        width: 40%;
+
+    }
+    &-welcome-image
+    {
+        float: right;
+        height: $welcome-imagesize;
+        width: $welcome-imagesize;
+        border-radius: 20px;
+        background-color: $header-welcomeicon-bg;
+        text-align: center;
+        vertical-align: middle;
+    }
+    &-welcome-text
+    {
+        float: right;
+        padding-right:2%;
+        color: $scf-color-base;
+        line-height: $welcome-imagesize;
+        vertical-align: middle;
+        text-align: right;
+        font-size: $welcome-fontsize;
+        font-family: $font-family-base;
+    }
+    &-menubutton
+    {
+        color: $header-icon-color;
+        font-size: $header-icon-size;
+    }
+    &-menuwelcome
+    {
+        color: $header-icon-color;
+        font-size: $header-welcomeicon-size;
+        margin: 0px auto;
+        line-height: $header-welcomeicon-size + 10px;
+    }
+}
+
+/* Menu Dropdown styles
+-------------------------------------------------- */
+.dropdown 
+{
+  &-menu
+  {
+    right:0 ;
+    left: auto;
+    border-radius: 0;
+    font-family: $font-family-base;
+    top:150%;
+    background-color: $menu-bg;
+    color:$menu-text-color;
+    border-top: 4px solid $menu-border-color;
+    min-width:215px;
+    li{
+      color:$menu-text-color;
+
+      & a:hover, a
+      {
+         color:$menu-text-color;
+         padding: 5px 8px;
+         font-size: 14px;
+         
+      }
+      & a:hover
+      {
+         background-color: $menu-bg-hover;
+      }
+    }
+    &-toppoint{
+      position:absolute;
+      top:-16px;
+      right:11px;
+    }
+    &-arrow
+    {
+      font-size: 10px;
+      color: $menu-border-color;
+      padding-right: 4%;
+    }
+    &-toparrow
+    {
+      font-size: 16px;
+      color: $menu-border-color;
+    }
+  }
+}
+/* Header styles
+-------------------------------------------------- */
+.main
+{
+    &-wrapper
+    {
+        clear:both;
+       
+    }
+    &-header
+    {
+        width:100%;
+        margin:0 auto;
+        background-color: $header-bg-color;
+        min-height: 97px;
+        padding-top:7px;
+    }
+    &-title
+    {
+        color:#fff;
+        padding-left:10px;
+        float:left;
+        h1{
+           margin:0px;
+           font-size: 21px;
+           line-height:22px;
+        }
+    }
+}
+.logo
+{
+    width:$title-logo-width;
+    height:$title-logo-height;
+    background-color: $title-logo-color;
+    float: left;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 85px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 85px;
+  background-color: $footer-bg-color;
+
+  &-text{
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    color: $footer-text-color;
+    text-align: right;
+    padding:35px 10px 0px 0px;
+    margin:0px;
+  }
+}
+
+/* Mobile Specific styles
+-------------------------------------------------- */
+
+@media (max-width: 767px) {
+
+.navbar
+{
+  &-welcome{
+    width: 55%;
+  }
+  &-welcome-image
+    {
+      height: $xs-welcome-imagesize;
+      width: $xs-welcome-imagesize;
+    }
+    &-welcome-text
+    {
+      font-size: $xs-welcome-fontsize;
+      line-height: $xs-welcome-imagesize;
+      
+    }
+    &-menubutton
+    {
+      font-size: $xs-header-icon-size;
+      
+    }
+    &-menuwelcome
+    {
+      font-size: $xs-header-welcomeicon-size;
+      line-height: $xs-header-welcomeicon-size + 10px;
+    }
+}
+.dropdown
+{
+  &-menu
+  {
+    min-width:175px;
+    li{
+
+      & a:hover, a{
+      font-size: 11px;
+      padding: 4px 6px;
+    }
+
+    }
+  &-toppoint{
+     right:5px;
+  }
+  &-arrow
+    {
+      font-size: 10px;
+    }
+    &-toparrow
+    {
+      font-size: 14px;
+      top:2px;
+    }
+  }
+}
+.logo
+{
+    width:$xstitle-logo-width;
+    height:$xstitle-logo-height;
+}
+
+.footer {
+  height:55px;
+  &-text{
+  font-size:9px;
+  padding:22px 0px 0px 0px;
+  text-align: center;
+}}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 55px;
+}
+
+}
+

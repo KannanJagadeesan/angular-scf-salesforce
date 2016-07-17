@@ -1,0 +1,49 @@
+<div id="tabs" class="tabs">
+    <nav>
+        <ul>
+            <li class="erroricon" data-ng-repeat="disp in $ctrl.disciplinesList track by $index" data-ng-click="$ctrl.setDisciplineStateChange(disp);">
+                <a href="#"> <span data-ng-bind="disp.discipline"></span> </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="assess-content-main">
+        <section class="content-current">
+            <div class="assess-wizard wizard clearfix vertical">
+                <!--Capability Listing Component -->
+                <scf-assess-capabilities data-capabilities="$ctrl.uniqueCapabilityDetails">
+                </scf-assess-capabilities>
+                <!--End of Capability Component-->
+
+                <div class="content clearfix">
+                    <div class="row body current">
+
+                        <!--Questions section component-->
+                        <scf-assess-questions 
+                            data-cap-list="$ctrl.capabilites" 
+                            data-cap-id="$ctrl.capID">
+                        </scf-assess-questions>
+                        <!--End of question section-->
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!--<div class="assess-wrapper">
+
+        <div class="row">
+            <div class="col-md-9">
+                <scf-assess-questions data-cap-list="$ctrl.capabilites" data-cap-id="$ctrl.capID">
+                </scf-assess-questions>
+            </div>
+
+            <div class="col-md-3">
+                
+            </div>
+
+        </div>
+
+    </div>-->
+</div>

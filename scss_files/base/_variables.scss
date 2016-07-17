@@ -1,0 +1,29 @@
+// Variables pertaining to SCF go here.
+
+//Background Colors
+
+$tab-active-bg: #0EC6ED;
+$header-bg: #934532;
+$header-logo: '/images/';
+
+
+//== Typography
+
+// ### Overriding BS's base font size
+
+
+// $font-size-base is declared in bootstrap variables.scss file
+
+$scf-color-base: #ffffff;
+
+//Font family
+$scf-roboto-regular : "roboto-regular" !default;
+$scf-font-family-base: $scf-roboto-regular, Arial, sans-serif !default;
+$wrapper-font-family: Arial,Helvetica,sans-serif !default;
+
+
+// Global Paths //
+$FONTFILEURL : "../fonts/" !default;
+
+$IMAGEPATH : "../images/" !default;
+

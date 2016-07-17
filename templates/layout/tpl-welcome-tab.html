@@ -1,0 +1,22 @@
+<div class="main-header-welcome">
+    <div class="navbar-menuicon">
+        <uib-dropdown >
+            <uib-dropdown-toggle aria-hidden="true" class="glyphicon glyphicon-option-vertical navbar-menubutton cursorpointer" aria-haspopup="true"
+                aria-expanded="false"></uib-dropdown-toggle>
+            <uib-dropdown-menu class="dropdown-menu" aria-labelledby="scf-dropdown">
+                <li class="dropdown-menu-toppoint"><span class="glyphicon glyphicon-triangle-top dropdown-menu-toparrow"></span></li>
+                <li ng-repeat="item in $ctrl.items">
+                    <a href><span class="glyphicon glyphicon-triangle-right dropdown-menu-arrow"></span><span data-ng-bind="item"></span></a>
+                </li>
+            </uib-dropdown-menu>
+        </uib-dropdown>
+    </div>
+    <div class="navbar-welcome">
+        <div class="navbar-welcome-image">
+            <span aria-hidden="true" class="glyphicon glyphicon glyphicon-user navbar-menuwelcome"></span>
+        </div>
+        <div class="navbar-welcome-text clearfix">
+            <span data-ng-bind="$ctrl.name"></span>
+        </div>
+    </div>
+</div>

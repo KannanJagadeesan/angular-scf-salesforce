@@ -1,0 +1,8 @@
+<div class="steps clearfix">
+    <ul>
+        <li class="inactive" data-ng-repeat="caplist in $ctrl.capabilities track by $index" 
+                             data-ng-click="$ctrl.setChangeCap(caplist)" >
+            <a data-ng-bind="caplist.capabilityName"></a>
+        </li>
+    </ul>
+</div>

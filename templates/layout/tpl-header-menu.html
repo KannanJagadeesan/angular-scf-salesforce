@@ -1,0 +1,13 @@
+<ul class="assess-menuicon clearfix">
+    <li class="assess-menubg" 
+            data-ng-repeat="menu in $ctrl.menuItems track by $index">
+        <a ui-sref="{{ menu.stepName | routingText }}">
+            <span>
+                <div class="assess-img assess-section-img{{$index + 1}}">
+                </div>
+            </span>
+            <div class="assess-text" data-ng-bind="menu.stepName"></div>
+        </a>
+    </li>
+</ul>
+
