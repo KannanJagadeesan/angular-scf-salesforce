@@ -11,7 +11,7 @@
     angular.module('ngForce.config', []).constant('ngForceConfig', {
         
         appName: 'SCF',
-        resourceUrl : 'http://localhost:7001'
+        resourceUrl : 'http://localhost:7000'
      
     });
 
